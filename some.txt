@@ -1,0 +1,49 @@
+function isIsogram(str){
+  
+  if (typeof str !== 'string')
+  {
+ return true
+ }
+  if (str === "") {
+return  false
+  }
+  
+  var passing = true;
+  var str2 = str.toLowerCase();
+  var counts = {};
+  
+  for (i = 0; i <= str2.length; i++) {
+    var letter = str2.charAt(i);
+    
+    if(counts[letter]) {
+ counts[letter] = 1 + counts[letter];
+ } else {
+ counts[letter] = 1;
+ }
+    if(counts[letter] > 1) {
+ return passing = false;
+ }
+
+}
+  return passing;
+
+}
+
+-----
+
+def remove_duplicates(string):
+   new_string = "".join(sorted(set(string)))
+   if new_string:
+     return (new_string, len(string)-len(new_string))
+   else:
+     print('Please provide only alphabets')
+---
+
+def longest(myText):
+  a = myText.split(' ')
+  return max(a, key=len)
+
+
+text = "This is Fabulous"
+print (longest(text))
+----
